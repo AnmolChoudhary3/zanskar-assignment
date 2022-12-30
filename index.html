@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.0/d3.min.js" integrity="sha512-jXsLjbg/Pr8F5U2evjFaEci7mImlUix865lbvnNmp5TzS86+VTTFVDz7FFTS6VHdhSn7UJ4tjZdvpp0GgT0fZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" defer src="script.js"></script>
+    <title>Nifty Futures</title>
+</head>
+<body>
+    <h1>Nifty futures data in the GUI</h1>
+    <h2>Chart Representation</h2>
+    <div id="chart"></div>
+    <h2>Tabular Representation</h2>
+    <form id="form">
+        <select id="option" name="option">
+            <option selected value="NIFTY1_MID">NIFTY1_MID</option>
+            <option value="NIFTY1_SPREAD">NIFTY1_SPREAD</option>
+            <option value="NIFTY2_MID">NIFTY2_MID</option>
+            <option value="NIFTY2_SPREAD">NIFTY2_SPREAD</option>
+            <option value="NIFTY3_MID">NIFTY3_MID</option>
+            <option value="NIFTY3_SPREAD">NIFTY3_SPREAD</option>
+        </select>
+        <table id="container"></table>
+        <div id="records">
+            <label for="size">Records per page</label>
+            <input name="size" type="number" value=20>
+        </div>
+
+        <div id="pagination">
+            <button name="prevPage" > < </button>
+            <input name="curPageNo" type="number" value=1>
+            <p>of</p>
+            <input readonly name="totalPages" type="number">
+            <button name="nextPage"> > </button>
+        </div>
+    </form>
+</body>
+</html>
